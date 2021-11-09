@@ -247,22 +247,22 @@
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <div class="card h-100" style="resize:both;overflow:auto;">
+            <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
                 Area Chart Example
               </div>
-                <div class="card-body" id="pie1">
+                <div class="card-body" id="pie1" style="resize:both;overflow:auto;">
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <div class="card h-100" style="resize:both;overflow:auto;">
+            <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
                 Area Chart Example
               </div>
-              <div class="card-body" id="bar1">
+              <div class="card-body" id="bar1" style="resize:both;overflow:auto;">
               </div>
             </div>
           </div>
@@ -817,7 +817,7 @@
 
     <script type="text/javascript">
     var config = {
-      // displayModeBar: false,
+      displayModeBar: false,
       responsive: true,
     }
 
@@ -830,7 +830,7 @@
 
     var layout = {
       height: 400,
-      width: 500,
+      // width: 250,
       autosize: true,
       legend: {
         x: 1,
@@ -838,7 +838,7 @@
         y: 1
       },
       margin: {
-        l: 2,
+        l: 0,
         r: 2,
       },
     };
@@ -860,7 +860,7 @@
 
     var layout1 = {
       height: 400,
-      width: 500,
+      // width: 500,
       autosize: true,
       showlegend: true,
       legend: {
@@ -869,7 +869,7 @@
         y: 1
       },
       margin: {
-        l: 2,
+        l: 0,
         r: 2,
       },
     }
