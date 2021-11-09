@@ -4,7 +4,7 @@ button {
   font-family: "Inter", sans-serif;
 }
 :root {
-  --offcanvas-width: 240px;
+  --offcanvas-width: 210px;
   --topNavbarHeight: 78px;
 }
 /* .sidebar-nav { */

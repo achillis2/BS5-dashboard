@@ -7,7 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Hello, world!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -32,7 +39,8 @@
           </form>
           <ul class="navbar-nav mb-2 mb-lg-0 ms-2">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-envelope"></i></a>
+              <a class="nav-link" href="#"><i class="bi bi-envelope"></i>
+              </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -180,7 +188,7 @@
         </div>
         <div class="row">
           <div class="col-md-3 mb-3">
-            <div class="card bg-primary text-white h-100">
+            <div class="card bg-primary text-white h-100" style="border-left-color: coral;">
               <div class="card-body py-5">Primary Card</div>
               <div class="card-footer d-flex">
                 View Details
@@ -225,25 +233,36 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card h-100" style="border-left: 5px solid coral;">
+              <div class="card-body">
+                  <h5 class="card-title">Eiffel Tower</h5>
+                  <h6 class="card-subtitle mb-3 text-muted">Champ de Mars, Paris, France</h6>
+                  <p class="card-text">Built in 1889 Eiffel Tower is one of the most iconic landmarks in the world.</p>
+                  <a href="#" class="card-link">View pictures</a>
+                  <a href="#" class="card-link">Learn more</a>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-6 mb-3">
-            <div class="card h-100">
+            <div class="card h-100" style="resize:both;overflow:auto;">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
                 Area Chart Example
               </div>
-              <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
+                <div class="card-body" id="pie1">
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <div class="card h-100">
+            <div class="card h-100" style="resize:both;overflow:auto;">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
                 Area Chart Example
               </div>
-              <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
+              <div class="card-body" id="bar1">
               </div>
             </div>
           </div>
@@ -745,10 +764,133 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <!-- Tabs navs -->
+            <ul class="nav nav-tabs" id="myTab">
+              <li class="nav-item">
+                  <a href="#home" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#profile" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#messages" class="nav-link">Messages</a>
+              </li>
+          </ul>
+          <div class="tab-content">
+              <div class="tab-pane fade show active" id="home">
+                  <h4 class="mt-2">Home tab content</h4>
+                  <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+              </div>
+              <div class="tab-pane fade" id="profile">
+                  <h4 class="mt-2">Profile tab content</h4>
+                  <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+              </div>
+              <div class="tab-pane fade" id="messages">
+                  <h4 class="mt-2">Messages tab content</h4>
+                  <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+              </div>
+          </div>
+            <!-- Tabs content -->
+          </div>
+        </div>
       </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#myTab a").click(function(e){
+          e.preventDefault();
+          $(this).tab("show");
+      });
+    });
+    </script>
+
+    <script type="text/javascript">
+    var config = {
+      // displayModeBar: false,
+      responsive: true,
+    }
+
+    // pie chart
+    var data = [{
+      values: [19, 26, 55],
+      labels: ['Residential', 'Non-Residential', 'Utility'],
+      type: 'pie'
+    }];
+
+    var layout = {
+      height: 400,
+      width: 500,
+      autosize: true,
+      legend: {
+        x: 1,
+        xanchor: 'right',
+        y: 1
+      },
+      margin: {
+        l: 2,
+        r: 2,
+      },
+    };
+
+    Plotly.newPlot('pie1', data, layout, config);
+
+    // bar chart
+    var trace1 = {
+      x: [1, 2, 3, 4],
+      y: [10, 15, 13, 17],
+      type: 'scatter'
+    };
+
+    var trace2 = {
+      x: [1, 2, 3, 4],
+      y: [16, 5, 11, 9],
+      type: 'scatter'
+    };
+
+    var layout1 = {
+      height: 400,
+      width: 500,
+      autosize: true,
+      showlegend: true,
+      legend: {
+        x: 1,
+        xanchor: 'right',
+        y: 1
+      },
+      margin: {
+        l: 2,
+        r: 2,
+      },
+    }
+    var data1 = [trace1, trace2];
+
+
+    Plotly.newPlot('bar1', data1, layout1, config);
+
+
+    window.onresize = function() {
+        Plotly.relayout('bar1', {
+            'xaxis.autorange': true,
+            'yaxis.autorange': true
+        });
+    };
+    window.onresize = function() {
+        Plotly.relayout('pie1', {
+            'xaxis.autorange': true,
+            'yaxis.autorange': true
+        });
+    };
+    </script>
   </body>
 </html>
